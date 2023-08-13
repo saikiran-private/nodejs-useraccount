@@ -3,38 +3,35 @@
 ### 1. Snyk Account creation
  Goto https://snyk.io/ and click on Signup
 
-C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\sny_login_page.png
+![Alt text](./images/sny_login_page.png)
 
 #### 1a. 2 ways of authentications are available select appropriate ones.
 Here, Lets go with GitHub based authentication, Click on Github from the image below.
 
-C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\sny_login_page.png
+![Alt text](./images/sny_login_page.png)
 
 #### 1b. select github as shown below, and clik on next steps from the below page
-
-C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation
-
+![Alt text](./images/snyk_2nd_page.png)
 Enter the credentials of the github from which snyk to be authenticated.
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\github_user_name_and_pass.png"
-
+![Alt text](./images/github_user_name_and_pass.png)
 
 #### 1c. select the repository type public or private as shown below and click on next step
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\select_repositories.png"
+![Alt text](./images/select_repositories.png)
 
 #### 1d. click on the authenticate github
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\authenticate_github.png"
+![Alt text](./images/authenticate_github.png)
 
 your snyk will be authneticated. Now you can use snyk to scan your repos from the UI.
 The repos will be listed if you have multiple repos in your namespace. You can select any one repo to scan. The  results will be shown as below.
 
 ### 2. Now API token has to be created to use it in the jenkins pipeline and also to use Snyk CLI
 #### 2a. Goto your username(1) and click on the Account-settings(2) as shown below
-    
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\create_api_token.png"
+
+ ![Alt text](./images/create_api_token.png)
 
 #### 2b. Click to the below shown location, It will show you the API token for your authenticated account. Copy it and store it safely, This will be required during authentication of your jenkins slave node where the pipelines are run.
 
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\token_path.png"
+ ![Alt text](./images/token_path.png)
 
 ### 3. Installing Docker if not available
 follow the steps mentioned in the link. https://docs.docker.com/engine/install/ubuntu/
@@ -81,8 +78,8 @@ Log out and log back in so that your group membership is re-evaluated.
 This token is aquired in the 2b step. Copy that token here
 
 After the command is excuted, the below image will be displayed. 
+ ![Alt text](./images/authenticated.png)
 
-"C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\authenticated.png"
 
 
 #### 4c. Report generation and Uploading to snyk UI
@@ -105,13 +102,17 @@ After the command is excuted, the below image will be displayed.
 
     snyk container test <image_name>:<image_tag> --json | snyk-to-html --output snykreport.html
 
-C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\snyk_container_scan.png
+ ![Alt text](./images/snyk_container_scan.png)
 
 ##### Scan code and get reports
 
 snyk code test --json | snyk-to-html --output codescan.html
 
 C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\apr-gitclass\snyk documentation\snyk_code_test.png
+![Alt text](./images/snyk_code_test.png)
+
+
+
 
 
 
@@ -141,4 +142,4 @@ Execute the below Trivy command to generate the report for image
 
 The above command will generate the report as shown below. Open the report.html to view this. 
 
- "C:\Users\SAIKIRAN SAYABUGARI\Desktop\Git Apr-2023\nodejs-useraccount-1\Documentation\images\trivy_image_scan.png"
+ ![Alt text](./images/trivy_image_scan.png)
