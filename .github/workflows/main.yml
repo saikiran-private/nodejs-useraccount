@@ -1,0 +1,11 @@
+name: First workflow
+on: 
+  workflow_dispatch:
+jobs:
+  first-job:
+    runs-on: scan_agent
+    steps:
+      - name: print greeting
+        run: echo "Hello World!"
+      - name: Pring Goodbye
+        run: echo "Done - bye"
